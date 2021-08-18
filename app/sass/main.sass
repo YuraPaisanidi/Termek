@@ -746,8 +746,39 @@
 			width: 100%
 
 .footer
+	padding-top: 80px
+	padding-bottom: 80px
+	background: $lightBg
+
+	+r(767)
+		padding-top: 40px
+		padding-bottom: 40px
+
 	&__container
 		+between
+
+		+r(767)
+			flex-direction: column
+			gap: 10px
+
+	&__copyright
+		color: $title
+
+	&__policy
+		color: $title
+
+		&:hover
+			color: $accent
+
+	&__made-by
+		color: $title
+
+		a
+			color: $title
+			text-decoration: underline
+
+			&:hover
+				color: $accent
 
 // -----MODAL-----
 .modal
