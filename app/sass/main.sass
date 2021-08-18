@@ -64,7 +64,7 @@
 	+r(767)
 		font-size: 32px
 
-.more-btn
+.arrow-btn
 	display: flex
 	align-items: center
 	font-size: 18px
@@ -591,6 +591,13 @@
 
 
 .news
+	margin-bottom: 200px
+
+	+r(1440)
+		margin-bottom: 80px
+
+	+r(767)
+		margin-bottom: 50px
 
 	&__header
 		display: flex
@@ -655,6 +662,41 @@
 
 			+r(992)
 				font-size: 18px
+
+
+.email
+	background: $lightBg
+	padding: 80px 150px
+
+	+r(767)
+		padding: 40px 80px
+
+	+r(480)
+		padding: 20px
+
+	&__title
+		margin-bottom: 100px
+
+		+r(767)
+			margin-bottom: 50px
+
+	&__input
+		display: flex
+		justify-content: space-between
+		width: 100%
+		padding-bottom: 25px
+		border-bottom: 1px solid $title
+
+		input
+			width: 100%
+			border: none
+			background: transparent
+			padding-left: 20px
+
+		button
+			border: none
+
+
 
 .footer
 	&__container
