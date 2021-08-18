@@ -667,9 +667,11 @@
 .email
 	background: $lightBg
 	padding: 80px 150px
+	margin-bottom: 55px
 
 	+r(767)
 		padding: 40px 80px
+		margin-bottom: 30px
 
 	+r(480)
 		padding: 20px
@@ -697,6 +699,51 @@
 			border: none
 
 
+.contacts
+	padding-bottom: 150px
+
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 70px
+
+		+r(992)
+			flex-direction: column
+			gap: 10px
+			text-align: center
+			margin-bottom: 30px
+
+	&__email
+
+		a
+			color: $title
+
+	&__tel
+		display: flex
+		flex-direction: column
+
+		a
+			color: $title
+			font-weight: 700
+
+	&__address
+
+		p
+			color: $title
+
+	&__map
+		height: 440px
+		overflow: hidden
+
+		+r(576)
+			height: 300px
+
+		+r(480)
+			height: 250px
+
+		iframe
+			width: 100%
 
 .footer
 	&__container
