@@ -45,8 +45,25 @@
 		background: $accent
 		color: #fff
 
+
 .h1
 	font-weight: 300
+
+
+.h2
+	font-size: 56px
+	font-weight: 300
+	color: $title
+	text-transform: uppercase
+
+	+r(1440)
+		font-size: 46px
+
+	+r(1200)
+		font-size: 36px
+
+	+r(767)
+		font-size: 32px
 
 // -----HAMBURGER-----
 .hamburger
@@ -127,6 +144,7 @@
 				width: 25px
 				transform: rotate(-45deg)
 
+
 .header
 	position: fixed
 	top: 0
@@ -192,6 +210,7 @@
 			background-color: #000
 			row-gap: 25px
 			overflow: scroll
+
 
 .hero
 
@@ -321,6 +340,7 @@
 			+r(480)
 				width: 20px
 
+
 .about
 	padding-top: 65px
 	padding-bottom: 65px
@@ -440,6 +460,136 @@
 
 				+r(576)
 					font-size: 14px
+
+
+.objects
+
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin-bottom: 45px
+
+		+r(1200)
+			margin-bottom: 20px
+
+		+r(480)
+			flex-direction: column
+			align-items: center
+
+
+	&__link
+		display: flex
+		align-items: center
+		font-size: 18px
+		color: $title
+		font-weight: 700
+		gap: 10px
+
+		+r(1200)
+			font-size: 16px
+		
+		span
+			height: 15px
+			position: relative
+			width: 3px
+			background: black
+			display: inline-block
+			transform: rotate(45deg)
+			+transition
+
+			+r(1200)
+				height: 13px
+				width: 2px
+			
+			&::before
+				content: " "
+				width: 3px
+				background: black
+				height: 12px
+				position: absolute
+				top: -4px
+				transform: rotate(40deg)
+				left: -3px
+				border-radius: 10px
+				+transition
+
+				+r(1200)
+					width: 2px
+					top: -5px
+
+			&::after
+				content: " "
+				width: 3px
+				background: black
+				height: 12px
+				position: absolute
+				top: -4px
+				transform: rotate(-40deg)
+				right: -3px
+				border-radius: 10px
+				+transition
+
+
+				+r(1200)
+					width: 2px
+					top: -5px
+
+		&:hover
+			color: $accent
+			
+			span
+				background: $accent
+
+				&::before,&::after
+					background: $accent
+
+	&__content
+		display: flex
+		flex-direction: column
+		gap: 10px
+
+		+r(992)
+			gap: 5px
+
+		&_row
+			display: grid
+			max-width: 100vw
+			grid-gap: 10px
+
+			+r(992)
+				grid-gap: 5px
+
+			&--first
+				grid-template-columns: 2fr 1fr 1fr 1fr
+
+				+r(576)
+					grid-template-columns: 1fr 1fr
+				
+			&--second
+				grid-template-columns: 1fr 1fr 2fr 1fr
+
+				+r(576)
+					grid-template-columns: 1fr 1fr
+
+		&_item
+			// max-width: 385px
+			// max-height: 385px
+			height: 100%
+			// border: 1px solid black
+
+			&--big
+				max-width: 100%
+				width: 100%
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+			// &:first-child
+			// 	grid-column-start: 1
+			// 	grid-column-end: 3
 
 
 .footer
