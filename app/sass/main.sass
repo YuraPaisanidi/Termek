@@ -45,16 +45,15 @@
 		background: $accent
 		color: #fff
 
-
 .h1
 	font-weight: 300
-
 
 .h2
 	font-size: 56px
 	font-weight: 300
 	color: $title
 	text-transform: uppercase
+	text-align: center
 
 	+r(1440)
 		font-size: 46px
@@ -64,6 +63,71 @@
 
 	+r(767)
 		font-size: 32px
+
+.more-btn
+	display: flex
+	align-items: center
+	font-size: 18px
+	color: $title
+	font-weight: 700
+	gap: 10px
+
+	+r(1200)
+		font-size: 16px
+
+	span
+		height: 15px
+		position: relative
+		width: 3px
+		background: black
+		display: inline-block
+		transform: rotate(45deg)
+		+transition
+
+		+r(1200)
+			height: 13px
+			width: 2px
+
+		&::before
+			content: " "
+			width: 3px
+			background: black
+			height: 12px
+			position: absolute
+			top: -4px
+			transform: rotate(40deg)
+			left: -3px
+			border-radius: 10px
+			+transition
+
+			+r(1200)
+				width: 2px
+				top: -5px
+
+		&::after
+			content: " "
+			width: 3px
+			background: black
+			height: 12px
+			position: absolute
+			top: -4px
+			transform: rotate(-40deg)
+			right: -3px
+			border-radius: 10px
+			+transition
+
+			+r(1200)
+				width: 2px
+				top: -5px
+
+	&:hover
+		color: $accent
+
+		span
+			background: $accent
+
+			&::before,&::after
+				background: $accent
 
 // -----HAMBURGER-----
 .hamburger
@@ -144,7 +208,6 @@
 				width: 25px
 				transform: rotate(-45deg)
 
-
 .header
 	position: fixed
 	top: 0
@@ -210,7 +273,6 @@
 			background-color: #000
 			row-gap: 25px
 			overflow: scroll
-
 
 .hero
 
@@ -378,6 +440,9 @@
 			align-self: center
 			justify-self: center
 
+			+r(767)
+				width: 100%
+
 		&_num
 
 			p
@@ -396,7 +461,6 @@
 					text-align: center
 
 		&_desc
-			
 
 			p
 				color: $title
@@ -463,6 +527,7 @@
 
 
 .objects
+	margin-bottom: 170px
 
 	&__header
 		display: flex
@@ -476,73 +541,6 @@
 		+r(480)
 			flex-direction: column
 			align-items: center
-
-
-	&__link
-		display: flex
-		align-items: center
-		font-size: 18px
-		color: $title
-		font-weight: 700
-		gap: 10px
-
-		+r(1200)
-			font-size: 16px
-		
-		span
-			height: 15px
-			position: relative
-			width: 3px
-			background: black
-			display: inline-block
-			transform: rotate(45deg)
-			+transition
-
-			+r(1200)
-				height: 13px
-				width: 2px
-			
-			&::before
-				content: " "
-				width: 3px
-				background: black
-				height: 12px
-				position: absolute
-				top: -4px
-				transform: rotate(40deg)
-				left: -3px
-				border-radius: 10px
-				+transition
-
-				+r(1200)
-					width: 2px
-					top: -5px
-
-			&::after
-				content: " "
-				width: 3px
-				background: black
-				height: 12px
-				position: absolute
-				top: -4px
-				transform: rotate(-40deg)
-				right: -3px
-				border-radius: 10px
-				+transition
-
-
-				+r(1200)
-					width: 2px
-					top: -5px
-
-		&:hover
-			color: $accent
-			
-			span
-				background: $accent
-
-				&::before,&::after
-					background: $accent
 
 	&__content
 		display: flex
@@ -565,7 +563,7 @@
 
 				+r(576)
 					grid-template-columns: 1fr 1fr
-				
+
 			&--second
 				grid-template-columns: 1fr 1fr 2fr 1fr
 
@@ -591,6 +589,72 @@
 			// 	grid-column-start: 1
 			// 	grid-column-end: 3
 
+
+.news
+
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: flex-end
+		margin-bottom: 45px
+
+		+r(1200)
+			margin-bottom: 20px
+
+		+r(480)
+			flex-direction: column
+			align-items: center
+
+	&__content
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-gap: 130px
+
+		+r(1200)
+			grid-gap: 80px
+
+		+r(992)
+			grid-gap: 50px
+
+		+r(767)
+			grid-template-columns: 1fr
+
+		&_column
+			display: flex
+			flex-direction: column
+			gap: 60px
+
+			+r(576)
+				gap: 30px
+
+	&__item
+		display: flex
+		flex-direction: column
+
+		&_date
+			display: flex
+			gap: 10px
+			margin-bottom: 15px
+
+			+r(576)
+				margin-bottom: 5px
+
+		&_img
+			margin-bottom: 20px
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+		&_title
+			font-size: 24px
+			color: $title
+			font-weight: 700
+			margin-bottom: 20px
+
+			+r(992)
+				font-size: 18px
 
 .footer
 	&__container
