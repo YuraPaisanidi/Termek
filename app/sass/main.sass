@@ -129,6 +129,16 @@
 			&::before,&::after
 				background: $accent
 
+.breadcrumbs
+	margin-bottom: 90px
+	color: $text
+
+	+r(992)
+		margin-bottom: 30px
+
+	a
+		color: $text
+
 // -----HAMBURGER-----
 .hamburger
 	position: relative
@@ -216,7 +226,7 @@
 	padding: 20px 0
 	z-index: 100
 
-	&--active
+	&--active, &--objects
 		background: #2B2D3F
 
 	&__container
@@ -574,10 +584,8 @@
 					grid-template-columns: 1fr 1fr
 
 		&_item
-			// max-width: 385px
-			// max-height: 385px
 			height: 100%
-			// border: 1px solid black
+			position: relative
 
 			&--big
 				max-width: 100%
@@ -588,10 +596,20 @@
 				width: 100%
 				height: 100%
 
-			// &:first-child
-			// 	grid-column-start: 1
-			// 	grid-column-end: 3
+			&::after
+				content: ''
+				position: absolute
+				top: 0
+				left: 0
+				background: $title
+				height: 100%
+				width: 100%
+				z-index: 10
+				opacity: 0
 
+			&:hover
+				&::after
+					opacity: 0.82
 
 .news
 	margin-bottom: 200px
@@ -782,6 +800,20 @@
 
 			&:hover
 				color: $accent
+
+
+.objects-page
+	margin-top: 90px
+	padding-top: 50px
+	margin-bottom: 60px
+
+	&__btn
+		display: flex
+		align-items: center
+		justify-content: center
+
+	&__content
+		margin-bottom: 60px
 
 // -----MODAL-----
 .modal
