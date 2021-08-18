@@ -226,7 +226,7 @@
 	padding: 20px 0
 	z-index: 100
 
-	&--active, &--objects
+	&--active, &--bg
 		background: #2B2D3F
 
 	&__container
@@ -663,6 +663,7 @@
 			display: flex
 			gap: 10px
 			margin-bottom: 15px
+			color: $title
 
 			+r(576)
 				margin-bottom: 5px
@@ -683,6 +684,9 @@
 
 			+r(992)
 				font-size: 18px
+
+		&_desc
+			color: $text
 
 
 .email
@@ -814,6 +818,15 @@
 
 	&__content
 		margin-bottom: 60px
+
+.news-page
+	@extend .objects-page
+
+	&__btn
+		@extend .objects-page__btn
+
+	&__content
+		@extend .objects-page__content
 
 // -----MODAL-----
 .modal
