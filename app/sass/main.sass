@@ -812,6 +812,9 @@
 	padding-top: 50px
 	margin-bottom: 60px
 
+	+r(480)
+		padding-top: 30px
+
 	&__btn
 		display: flex
 		align-items: center
@@ -892,6 +895,95 @@
 		ul,ol
 			align-self: flex-start
 			padding-left: 50px
+
+
+.object-item
+	@extend .objects-page
+	padding-bottom: 150px
+
+	+r(1200)
+		padding-bottom: 50px
+
+	+r(576)
+		padding-bottom: 0
+
+	&__content
+		display: grid
+		grid-template-columns: 690px 1fr
+		grid-gap: 60px
+
+		+r(1200)
+			grid-template-columns: 600px 1fr
+			grid-gap: 30px
+
+		+r(992)
+			grid-template-columns: 1fr
+
+	&__img
+		display: flex
+		gap: 20px
+
+		+r(1200)
+			gap: 10px
+
+
+		&_main
+			max-width: 590px
+			max-height: 450px
+			width: 100%
+
+			+r(1200)
+				max-height: 400px
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+		&_gallery
+
+			ul
+				display: flex
+				flex-direction: column
+				gap: 15px
+
+				+r(1200)
+					gap: 10px
+
+				li
+					max-width: 80px
+					width: 100%
+					height: 60px
+
+					img
+						object-fit: cover
+						width: 100%
+						height: 100%
+
+	&__info
+
+		&_title
+			color: $title
+			font-size: 24px
+			font-weight: 700
+			margin-bottom: 20px
+
+		&_city
+			display: flex
+			gap: 10px
+			color: $title
+			margin-bottom: 15px
+
+		&_area
+			color: $title
+			margin-bottom: 55px
+
+			+r(992)
+				margin-bottom: 30px
+
+			span
+				font-weight: 700
+				margin-right: 10px
 
 // -----MODAL-----
 .modal
