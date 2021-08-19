@@ -10,6 +10,7 @@
 	<link rel="icon" href="img/favicon.ico">
 	<meta property="og:image" content="img/preview.jpg">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
 	<script src="js/app.min.js" defer></script>
 
 </head>
@@ -127,8 +128,8 @@
 
 			<div class="about__numbers">
 
-				<div class="about__numbers_item">
-					<div class="about__numbers_num">
+				<div class="about__numbers_item number">
+					<div class="about__numbers_num number__item">
 						<p>20+</p>
 					</div>
 					<div class="about__numbers_desc">
@@ -136,8 +137,8 @@
 					</div>
 				</div>
 
-				<div class="about__numbers_item">
-					<div class="about__numbers_num">
+				<div class="about__numbers_item number">
+					<div class="about__numbers_num number__item">
 						<p>120+</p>
 					</div>
 					<div class="about__numbers_desc">
@@ -145,8 +146,8 @@
 					</div>
 				</div>
 
-				<div class="about__numbers_item">
-					<div class="about__numbers_num">
+				<div class="about__numbers_item number">
+					<div class="about__numbers_num number__item">
 						<p>35+</p>
 					</div>
 					<div class="about__numbers_desc">
@@ -154,8 +155,8 @@
 					</div>
 				</div>
 
-				<div class="about__numbers_item">
-					<div class="about__numbers_num">
+				<div class="about__numbers_item number">
+					<div class="about__numbers_num number__item">
 						<p>15+</p>
 					</div>
 					<div class="about__numbers_desc">
@@ -190,7 +191,8 @@
 							</p>
 							<div class="about__info_link">
 								<img src="img/patent.svg" alt="">
-								<a href="#">Смотреть</a>
+								<a href="img/object1.jpg" data-fancybox="first_gallery">Смотреть</a>
+								<a href="img/object2.jpg" data-fancybox="first_gallery" style="display:none;"></a>
 							</div>
 						</div>
 					</div>
@@ -219,7 +221,8 @@
 							</p>
 							<div class="about__info_link">
 								<img src="img/patent.svg" alt="">
-								<a href="#">Смотреть</a>
+								<a href="img/object1.jpg" data-fancybox="first_gallery">Смотреть</a>
+								<a href="img/object2.jpg" data-fancybox="first_gallery" style="display:none;"></a>
 							</div>
 						</div>
 					</div>
@@ -469,7 +472,7 @@
 
 				<div class="news__content_column">
 
-					<div class="news__item">
+					<a href="#" class="news__item">
 						<div class="news__item_date">
 							<img src="img/pencil.svg" alt="">
 							<p>22/05/2021</p>
@@ -492,9 +495,9 @@
 								Lorem lacus lectus tristique sed. Habitasse non eget duis arcu sagittis.
 							</p>
 						</div>
-					</div>
+					</a>
 					
-					<div class="news__item">
+					<a href="#" class="news__item">
 						<div class="news__item_date">
 							<img src="img/pencil.svg" alt="">
 							<p>22/05/2021</p>
@@ -517,13 +520,13 @@
 								Lorem lacus lectus tristique sed. Habitasse non eget duis arcu sagittis.
 							</p>
 						</div>
-					</div>
+					</a>
 
 				</div>
 				
 				<div class="news__content_column">
 
-					<div class="news__item">
+					<a href="#" class="news__item">
 						<div class="news__item_date">
 							<img src="img/pencil.svg" alt="">
 							<p>22/05/2021</p>
@@ -546,9 +549,9 @@
 								Lorem lacus lectus tristique sed. Habitasse non eget duis arcu sagittis.
 							</p>
 						</div>
-					</div>
+					</a>
 					
-					<div class="news__item">
+					<a href="#" class="news__item">
 						<div class="news__item_date">
 							<img src="img/pencil.svg" alt="">
 							<p>22/05/2021</p>
@@ -571,13 +574,13 @@
 								Lorem lacus lectus tristique sed. Habitasse non eget duis arcu sagittis.
 							</p>
 						</div>
-					</div>
+					</a>
 
 				</div>
 
 				<div class="news__content_column">
 
-					<div class="news__item">
+					<a href="#" class="news__item">
 						<div class="news__item_date">
 							<img src="img/pencil.svg" alt="">
 							<p>22/05/2021</p>
@@ -600,9 +603,9 @@
 								Lorem lacus lectus tristique sed. Habitasse non eget duis arcu sagittis.
 							</p>
 						</div>
-					</div>
+					</a>
 					
-					<div class="news__item">
+					<a href="#" class="news__item">
 						<div class="news__item_date">
 							<img src="img/pencil.svg" alt="">
 							<p>22/05/2021</p>
@@ -625,7 +628,7 @@
 								Lorem lacus lectus tristique sed. Habitasse non eget duis arcu sagittis.
 							</p>
 						</div>
-					</div>
+					</a>
 
 				</div>
 
@@ -681,6 +684,16 @@
 			<p class="footer__made-by">designed by <a href="http://flex-design.net/">FlexDesign</a></p>
 		</div>
 	</footer>
+
+	<script
+		src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+		crossorigin="anonymous">
+	</script>
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
 
 </body>
 </html>

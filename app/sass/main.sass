@@ -548,6 +548,9 @@
 .objects
 	margin-bottom: 170px
 
+	+r(992)
+		margin-bottom: 70px
+
 	&__header
 		display: flex
 		justify-content: space-between
@@ -580,13 +583,13 @@
 			&--first
 				grid-template-columns: 2fr 1fr 1fr 1fr
 
-				+r(576)
+				+r(767)
 					grid-template-columns: 1fr 1fr
 
 			&--second
 				grid-template-columns: 1fr 1fr 2fr 1fr
 
-				+r(576)
+				+r(767)
 					grid-template-columns: 1fr 1fr
 
 		&_item
@@ -618,6 +621,9 @@
 		padding: 20px 25px
 		opacity: 0
 
+		+r(992)
+			padding: 10px
+
 		&:hover
 				opacity: 0.82
 
@@ -634,19 +640,62 @@
 			background-color: rgba(254, 254, 255, 0.3)
 			margin-bottom: 20px
 
+			+r(1440)
+				font-size: 42px
+				width: 50px
+				height: 50px
+
+			+r(1200)
+				font-size: 30px
+				width: 30px
+				height: 30px
+				margin-bottom: 10px
+
+			span
+				margin-top: 2px
+
 		&_title
 			color: #fff
 			font-size: 24px
 			margin-bottom: 30px
+
+			+r(1440)
+				font-size: 18px
+				margin-bottom: 20px
+
+			+r(1200)
+				font-size: 16px
+
+			+r(992)
+				font-size: 14px
+				margin-bottom: 10px
 
 		&_location
 			display: flex
 			justify-content: space-between
 			width: 100%
 
+			+r(1200)
+				font-size: 14px
+				flex-direction: column
+				gap: 5px
+
+			+r(767)
+				flex-direction: row
+
+			+r(480)
+				flex-direction: column
+
+			// +r(767)
+			// 	font-size: 12px
+
 		&_city
 			display: flex
+			align-items: center
 			gap: 10px
+
+			// +r(767)
+			// 	gap: 5px
 
 			p
 				color: #fff
@@ -654,6 +703,10 @@
 			img
 				width: 12px
 				height: 17px
+
+				// +r(767)
+				// 	width: 8px
+				// 	height: 12px
 		
 		&_area
 			color: #fff
@@ -661,6 +714,9 @@
 			span
 				font-weight: 700
 				margin-right: 10px
+
+				// +r(767)
+				// 	margin-right: 5px
 
 
 .news
@@ -778,6 +834,9 @@
 
 .contacts
 	padding-bottom: 150px
+
+	+r(992)
+		padding-bottom: 60px
 
 	&__header
 		display: flex
@@ -1396,7 +1455,7 @@
 			font-size: 20px
 
 		span
-			height: 40px
+			height: 20px
 			position: relative
 			width: 3px
 			background: black
