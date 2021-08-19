@@ -1396,30 +1396,49 @@
 			font-size: 20px
 
 		span
-			+transition
+			height: 40px
 			position: relative
-			width: 32px
-			height: 32px
-			border-radius: 50%
-			border: 1px solid $black
+			width: 3px
+			background: black
+			display: inline-block
+			transform: rotate(180deg)
+			+transition
 
-			&::before,
-			&::after
-				+transition
-				content: ''
-				position: absolute
-				top: 50%
-				left: 50%
-				transform: translate(-50%, -50%)
-				background-color: $black
+			+r(1200)
+				height: 13px
+				width: 2px
 
 			&::before
-				width: 10px
-				height: 1px
+				content: " "
+				width: 3px
+				background: black
+				height: 12px
+				position: absolute
+				top: -4px
+				transform: rotate(40deg)
+				left: -3px
+				border-radius: 10px
+				+transition
+
+				+r(1200)
+					width: 2px
+					top: -5px
 
 			&::after
-				height: 10px
-				width: 1px
+				content: " "
+				width: 3px
+				background: black
+				height: 12px
+				position: absolute
+				top: -4px
+				transform: rotate(-40deg)
+				right: -3px
+				border-radius: 10px
+				+transition
+
+				+r(1200)
+					width: 2px
+					top: -5px
 
 	&__content
 		+transition
@@ -1446,14 +1465,7 @@
 				margin-bottom: 20px
 
 				span
-					background-color: $accent
-					border-color: $accent
-
-					&::before,
-						background-color: #ffffff
-
-					&::after
-						background-color: transparent
+					transform: rotate(360deg)
 
 			&__content
 				opacity: 1
